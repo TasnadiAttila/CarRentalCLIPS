@@ -60,7 +60,6 @@
     ;aki egy nappal a furgonosok előtt kapta a munkát
     ;és a kamionos-logót vagy a személyautó-kölcsönző megbízását
     ;teljesítő tervező, valamilyen sorrendben
-    (megbizas ?GRETA&~?GEZA&~?GEDEON)
     (megbizas ?GIZELLA&~?GABOR)
     (megbizas ?KAMION&~?FURGON&~?SZEMELYAUTO&~?TEHERAUTO)
     (megbizas ?MIKROBUSZ&~?KAMION&~?FURGON&~?SZEMELYAUTO&~?TEHERAUTO)
@@ -150,8 +149,6 @@
     ;Szabaly7
     ;Gerda a Gergely által képviselt furgon-, vagy a 
     ;kamion-kölcsönző megbízását kapta
-    (megbizas ?GERGELY&~?GEDEON&~?GEZA&~?GRETA)
-    (megbizas ?GUSZTAV&~?GERGELY&~?GEDEON&~?GEZA&~?GRETA)
     (and
         (megbizas ?GERGELY&?GERDA)
         (or
@@ -160,15 +157,13 @@
         )
     )
 
-    (megbizas ?HETFO)
+    (megbizas ?HETFO&~?CSUTORTOK)
     (test (= ?HETFO 1))
-    (megbizas ?KEDD&~?HETFO)
+    (megbizas ?KEDD&~?HETFO&~?CSUTORTOK)
     (test (= ?KEDD 2))
-    (megbizas ?SZERDA&~?KEDD&~?HETFO)
+    (megbizas ?SZERDA&~?KEDD&~?HETFO&~?CSUTORTOK)
     (test (= ?SZERDA 3))
-    (megbizas ?CSUTORTOK&~?SZERDA&~?KEDD&~?HETFO)
-    (test (= ?CSUTORTOK 4))
-    (megbizas ?PENTEK&~?CSUTORTOK&~?SZERDA&~?KEDD&~?HETFO)
+    (megbizas ?PENTEK&~?SZERDA&~?KEDD&~?HETFO&~?CSUTORTOK)
     (test (= ?PENTEK 5))
     
     =>
